@@ -188,7 +188,7 @@ class Occurrence(models.Model):
         base_manager_name = 'objects'
 
     def __str__(self):
-        return u'{}: {}'.format(self.title, self.start_time.isoformat())
+        return '%s: %s'.format(self.title, self.start_time.isoformat())
 
     def get_absolute_url(self):
         return reverse('swingtime-occurrence', args=[str(self.event.id), str(self.id)])
